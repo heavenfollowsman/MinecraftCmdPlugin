@@ -101,9 +101,9 @@ func (p *PluginMinecraftCmdPlugin) Init(engine *zero.Engine, env plugin.Env) err
 			return
 		}
 
-		for _, prefix := range dangerousPrefixes {
-			if strings.HasPrefix(strings.ToLower(cmd), strings.ToLower(prefix)) {
-				ctx.Send("该指令疑似高危操作，禁止执行")
+		for _, keyword := range dangerousPrefixes {
+			if strings.Contains(strings.ToLower(cmd), strings.ToLower(keyword)) {
+				ctx.Send("该指令包含高危关键字，禁止执行")
 				return
 			}
 		}
