@@ -141,7 +141,7 @@ func (p *PluginMinecraftCmdPlugin) Commands() fmt.Stringer {
 }
 
 func (p *PluginMinecraftCmdPlugin) Version() uint64 {
-	return uint64(version.NewVersion(0, 0, 20))
+	return uint64(version.NewVersion(0, 0, 30))
 }
 
 func (p *PluginMinecraftCmdPlugin) OnBoot() {
